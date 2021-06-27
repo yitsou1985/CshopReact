@@ -1,9 +1,11 @@
 import React from 'react';
 // import data from './data';
+import SignIn from './SignIn';
 import {BrowserRouter,Route,Link} from 'react-router-dom'
 import './App.css';
 import HomeScreen from './Screen/HomeScreen';
 import ProductScreen from './Screen/ProductScreen';
+import Register from './Register';
 
 function App() {
   const openMenu = () =>{document.querySelector(".sidebar").classList.add("open")}
@@ -21,10 +23,16 @@ function App() {
          
         </div>
         <div className="header-links">
-        <a href="signin.html">Sign In 🔑</a>
-          <a href="cart.html">Cart 🛒 </a>
+        
+        <Link to='/SignIn' >Sign In 🔑 </Link>
+        
+      
+          <Link to="/Cart">Cart 🛒</Link>
         </div>
-      </header>
+        </header>
+        
+      
+        
       <aside className="sidebar">
         <h3>Shopping Categories</h3>
         <button className="sidebar-close-button" 
@@ -34,10 +42,14 @@ function App() {
           <li><a href="index.html">Shirts</a></li>
         </ul>
       </aside>
+
+    
       <main className="main">
         <div className="content">
         <Route path='/product/:id' component={ProductScreen}/>
         <Route path='/'exact={true} component={HomeScreen}/>
+        <Route path='/SignIn' component={SignIn}/>
+        <Route path='/Register' component={Register}/>
           
            
         </div>
