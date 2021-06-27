@@ -21,8 +21,8 @@ function App() {
          
         </div>
         <div className="header-links">
-          <a href="cart.html">Cart </a>
-          <a href="signin.html">Sign In</a>
+        <a href="signin.html">Sign In 🔑</a>
+          <a href="cart.html">Cart 🛒 </a>
         </div>
       </header>
       <aside className="sidebar">
